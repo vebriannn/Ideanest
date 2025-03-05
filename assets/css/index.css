@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    /* border: 1px solid red; */
+    font-family: 'Helvetica', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --lime-yellow: #D1F544;
+    --charcoal-gray: #292D32;
+    --medium-gray: #808080;
+    --stroke: #666;
+}

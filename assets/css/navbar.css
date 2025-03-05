@@ -1,0 +1,184 @@
+body {
+    background: url('../img/hero-section-home.png') no-repeat center center/cover;
+    height: 200vh;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* More transparent */
+    backdrop-filter: blur(6px);
+    /* Softer blur */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 96%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.logo {
+    background: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-weight: normal;
+    transition: ease-in-out 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn,
+.signin-signup-mobile {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-signin {
+    border: 2px solid transparent;
+    background: transparent;
+    color: white;
+    font-weight: normal;
+    transition: ease-in-out 0.3s;
+}
+
+.btn-signin:hover {
+    border: 2px solid #D1F544;
+    color: white;
+    font-weight: normal;
+}
+
+.btn-signup {
+    border: 2px solid transparent;
+    background: #D1F544;
+    color: black;
+    font-weight: normal;
+    transition: ease-in-out 0.3s;
+}
+
+.btn-signup:hover {
+    border: 2px solid #D1F544;
+    background: transparent;
+    color: white;
+    font-weight: normal;
+}
+
+.signin-signup-mobile {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(18px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-nav.active {
+        display: block;
+        margin-left: 00px !important;
+        margin-top: 40px;
+    }
+
+    nav .navbar-nav li {
+        margin-bottom: 10px;
+    }
+
+    nav .navbar-nav li a {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .signin-signup-mobile {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+}

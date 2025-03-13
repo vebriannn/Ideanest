@@ -404,7 +404,6 @@ main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .c
 
 .footer {
     background-color: white !important;
-    color: black !important;
     padding: 60px 20px 20px;
 }
 
@@ -415,6 +414,10 @@ main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .c
     background-color: white !important;
     color: #fff;
     border-radius: 4px 0 0 4px;
+}
+
+.footer-column h3 {
+    color: black !important;
 }
 
 

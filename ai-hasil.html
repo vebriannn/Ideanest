@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usaha Peternakan Lele - Ideanest</title>
+    <link rel="stylesheet" href="assets/css/ai-hasil.css">
+    <link rel="stylesheet" href="assets/css/navbarr.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar" id="navbar">
+           <img src="assets/images/logo.png" alt="" class="logo">
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-nav" id="navLinks">
+                <li><a href="index.html" class="nav-link ">Home</a></li>
+                <li><a href="ai.html" class="nav-link active">Ai</a></li>
+                <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+                <li><a href="#" class="nav-link">Kontak</a></li>
+                <li>
+                    <div class="signin-signup-mobile">
+                        <a href="#" class="btn btn-signin" id="mobileSignInBtn">Sign In</a>
+                        <a href="#" class="btn btn-signup" id="mobileSignUpBtn">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-signin" id="signInBtn">Sign In</a>
+                <a href="#" class="btn btn-signup" id="signUpBtn">Sign Up</a>
+            </div>
+        </nav>
+        
+        <!-- Sign In Modal -->
+        <div class="modal" id="signInModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign In</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Sign In</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signUpModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Create Account</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="switchToSignIn">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Header Section -->
+            <section class="business-header">
+                <div class="business-info">
+                    <h1 class="business-title">Usaha Peternakan Lele</h1>
+                    <div class="location">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Tulungagung, Jawa Timur</span>
+                    </div>
+                </div>
+                <div class="price-range">
+                    <div class="label">Modal</div>
+                    <div class="price">Rp 10.000.000 – Rp 12.000.000</div>
+                </div>
+            </section>
+
+            <!-- Image Slider Section -->
+            <section class="image-slider-section">
+                <div class="slider-container">
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img src="/assets/images/ai-hasil/Frame 136.png" alt="Kolam peternakan lele">
+                        </div>
+                        <div class="image-item">
+                            <img src="/assets/images/ai-hasil/Frame 137.png" alt="Bibit lele di tangan">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="prev-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 18l-6-6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="slider-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                            <span class="dot" data-index="3"></span>
+                        </div>
+                        <button class="next-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 18l6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Sections -->
+            <div class="info-grid">
+                <!-- Description Section -->
+                <section class="info-section1 description">
+                    <h2>Deskripsi</h2>
+                    <p>Budidaya ikan lele merupakan peluang usaha yang populer di berbagai daerah karena proses pemeliharaannya yang mudah, modal yang relatif terjangkau, dan waktu panen yang singkat. Dengan perawatan rutin, ikan lele dapat tumbuh optimal. Cocok untuk pemula yang ingin mengembangkan bisnis di sektor perikanan.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v4l3 3"></path>
+                            </svg>
+                            <div>
+                                <div class="info-label">Harga Jual</div>
+                                <div class="info-value">Rp 22.000/kg</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <div>
+                                <div class="info-label">Lama panen</div>
+                                <div class="info-value">2-3 bulan</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            <div>
+                                <div class="info-label">Lahan</div>
+                                <div class="info-value">50-100 m²</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tips Section -->
+                <section class="info-section tips">
+                    <h2>Tips & Trik dalam Beternak Lele</h2>
+                    
+                    <div class="tip-items">
+                        <div class="tip-item">
+                            <div class="tip-icon">⚡</div>
+                            <div class="tip-content">
+                                <p>Gunakan bibit lele yang sehat, aktif, dan berukuran seragam untuk pertumbuhan cepat.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">⚡</div>
+                            <div class="tip-content">
+                                <p>Pastikan air kolam tidak terlalu keruh, bersih, atau kotor. Lakukan pengeringan air agar ikan tetap sehat.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">⚡</div>
+                            <div class="tip-content">
+                                <p>Rutin cek kondisi ikan untuk mencegah penyakit. Segera pisahkan ikan yang terlihat lemah atau sakit.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">⚡</div>
+                            <div class="tip-content">
+                                <p>Beri pakan secara teratur dan sesuai kebutuhan. Jangan terlalu banyak atau terlalu sedikit.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-icon">⚡</div>
+                            <div class="tip-content">
+                                <p>Buat area teduh di kolam untuk mengurangi stres pada ikan akibat panas berlebih, terutama di siang hari.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Modal Allocation Section -->
+            <section class="modal-allocation">
+                <h2>Pembagian Alokasi Modal</h2>
+                <p class="subtitle">Rincian Alokasi Modal untuk Mengoptimalkan Keberhasilan Budidaya Lele</p>
+
+                <div class="allocation-tip">
+                    <div class="tip-icon">⚡</div>
+                    <p>Utamakan kebutuhan penting, siapkan cadangan, dan jangan lupa promosi agar hasil panen lebih mantap!</p>
+                </div>
+
+                <div class="price-info">
+                    <div class="price-label">Harga jual</div>
+                    <div class="price-value">Rp 22.000/kg</div>
+                </div>
+
+                <div class="allocation-container">
+                    <h3>Alokasi modal</h3>
+                    
+                    <div class="allocation-grid">
+                        <div class="allocation-item">
+                            <div class="allocation-title">Pembuatan Kolam</div>
+                            <div class="allocation-price">Rp 2.500.000 – Rp 3.000.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Pembelian Bibit Lele</div>
+                            <div class="allocation-price">Rp 1.200.000 – Rp 1.500.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Pakan Lele</div>
+                            <div class="allocation-price">Rp 2.800.000 – Rp 3.300.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Vitamin & Obat-obatan</div>
+                            <div class="allocation-price">Rp 500.000 – Rp 600.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Peralatan Pendukung</div>
+                            <div class="allocation-price">Rp 800.000 – Rp 1.000.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Listrik & Air</div>
+                            <div class="allocation-price">Rp 500.000 – Rp 600.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Kebersihan & Perawatan Kolam</div>
+                            <div class="allocation-price">Rp 400.000 – Rp 500.000</div>
+                        </div>
+                    </div>
+
+                    <div class="other-costs">
+                        <h3>Lain - lain</h3>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Dana Darurat</div>
+                            <div class="allocation-price">Rp 800.000 – Rp 1.000.000</div>
+                        </div>
+                        <div class="allocation-item">
+                            <div class="allocation-title">Tenaga Kerja (Opsional)</div>
+                            <div class="allocation-price">Rp 500.000 – Rp 600.000</div>
+                        </div>
+                    </div>
+
+                    <button class="download-btn">Download file</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="/assets/images/logo.png" alt="" height="30">
+                </div>
+                <p>Subscribe kami untuk kabar terkini tentang fitur dan peluncuran terbaru.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Masukkan email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li><a href="artikel.html">Artikel</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Alamat</h3>
+                    <ul>
+                        <li><a href="#">Jakarta</a></li>
+                        <li><a href="#">Semarang</a></li>
+                        <li><a href="#">Medan</a></li>
+                        <li><a href="#">Bali</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                        <li><a href="#">Kepercayaan dan Keamanan</a></li>
+                        <li><a href="#">Pengelolaan Cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright ©2025 Ideanest. All right reserved</p>
+            <div class="footer-legal">
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+   
+
+    <script src="/assets/js/navbarr.js"></script>
+    <script src="/assets/js/ai-hasil.js"></script>
+</body>
+</html>

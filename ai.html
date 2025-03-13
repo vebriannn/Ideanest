@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - AI</title>
+    <link rel="stylesheet" href="assets/css/ai.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+</head>
+
+
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="assets/img/icon.png" alt="ideanest logo" width="20px" height="20px">
+                Ideanest
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="ai.html" class="nav-link active">Ai</a></li>
+                <li><a href="#" class="nav-link">Artikel</a></li>
+                <li><a href="#" class="nav-link">Kontak</a></li>
+                <li>
+                    <div class="signin-signup-mobile">
+                        <a href="#" class="btn btn-signin">Sign In</a>
+                        <a href="#" class="btn btn-signup">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-signin">Sign In</a>
+                <a href="#" class="btn btn-signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- section ai -->
+        <section class="section-generate-works" id="section-generate-works">
+            <div class="container-fluid text-center text-white" style="padding: 5rem 1rem;">
+                <div class="title-groups">
+                    <div class="icon-text fade-down">
+                        <img src="assets/img/icon.png" alt="logo ideanest" width="20px" height="20px">
+                        <p>Ideanest</p>
+                    </div>
+                    <h1 class="title fade-right">Ayo Temukan Ide Usaha Terbaik Berdasarkan Lokasimu!</h1>
+                    <p class="lead fade-left">Masukkan lokasi, dan modal kamu untuk mendapatkan rekomendasi bisnis
+                        sesuai potensi
+                        daerahmu.</p>
+                </div>
+                <div class="card fade-up">
+                    <div class="card-body">
+                        <form class="generate-works-form">
+                            <div class="mb-3 location">
+                                <label class="form-label">Lokasi</label>
+                                <div class="location-input d-flex gap-2">
+                                    <input type="text" id="province" class="form-control" placeholder="Provinsi">
+                                    <span>/</span>
+                                    <input type="text" id="city" class="form-control" placeholder="Kabupaten">
+                                    <span>/</span>
+                                    <input type="text" id="village" class="form-control" placeholder="Desa">
+                                </div>
+                            </div>
+
+                            <div class="mb-3 modal">
+                                <label for="capital" class="form-label">Modal</label>
+                                <input type="text" id="capital" class="form-control" placeholder="Masukan modal">
+                            </div>
+
+                            <div class="mb-3 description">
+                                <label for="business-description" class="form-label">Deskripsi Usaha</label>
+                                <textarea id="business-description" class="form-control" rows="4"
+                                    placeholder="Masukan deskripsi usaha"></textarea>
+                            </div>
+
+                            <button type="button" class="btn btn-warning w-100"
+                                onclick="viewResults()">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section results -->
+        <section class="section-results-ai" id="section-results-ai">
+            <div class="container-fluid">
+                <h1 class="title">Rekomendasi Kami</h1>
+                <div class="flex-container">
+                    <a href="detail-ai.html" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-1.png" alt="Usaha Peternakan Lele">
+                        <div class="card-content">
+                            <h2 class="card-title">Usaha Peternakan Lele</h2>
+                            <p class="card-description">Budidaya lele kini adalah peluang usaha...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-2.png" alt="Usaha Pertanian">
+                        <div class="card-content">
+                            <h2 class="card-title">Usaha Pertanian</h2>
+                            <p class="card-description">Pertanian adalah usaha mengolah lahan...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-3.png" alt="Peternakan Ayam">
+                        <div class="card-content">
+                            <h2 class="card-title">Peternakan Ayam</h2>
+                            <p class="card-description">Peternakan ayam adalah beternak...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-4.png" alt="Usaha Thrifting">
+                        <div class="card-content">
+                            <h2 class="card-title">Usaha Thrifting</h2>
+                            <p class="card-description">Usaha thrifting adalah bisnis jual beli pakaian...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-5.png" alt="Kerajinan Batik">
+                        <div class="card-content">
+                            <h2 class="card-title">Kerajinan Batik</h2>
+                            <p class="card-description">Batik menjadi warisan budaya Indonesia...</p>
+                        </div>
+                    </a>
+                    <a href="#" class="card zoom-in">
+                        <img src="assets/img/items-card/card-items-6.png" alt="Kerajinan Marmer">
+                        <div class="card-content">
+                            <h2 class="card-title">Kerajinan Marmer</h2>
+                            <p class="card-description">Kerajinan marmer Tulungagung adalah usaha...</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="assets/js/navbar.js"></script>
+    <script>
+        function viewResults() {
+            document.getElementById('section-results-ai').style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>

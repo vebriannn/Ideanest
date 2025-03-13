@@ -1,7 +1,9 @@
-body {
+/* body {
     background: url('../img/hero-section-home.png') no-repeat center center/cover;
     height: 200vh;
-}
+} */
+
+
 
 .navbar {
     background-color: rgba(255, 255, 255, 0.1);
@@ -11,6 +13,8 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     width: 96%;
+    max-width: 1300px;
+    margin: 0 auto;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -23,10 +27,14 @@ body {
 }
 
 .logo {
-    background: white;
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: white;
 }
 
 .navbar-nav {

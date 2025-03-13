@@ -1,0 +1,845 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Helvetica', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+:root {
+    --lime-yellow: #D1F544;
+    --charcoal-gray: #292D32;
+    --medium-gray: #808080;
+    --stroke: #666;
+    --charcoal-black: #141414;
+    --light-gray: #999999;
+    --dark-grey: #262626;
+    --eerie-black: #1A1A1A;
+    --green-matcha: #6F9827;
+}
+
+body {
+    background-color: black;
+    height: max-content;
+    padding: 50px 0;
+}
+
+.container-fluid {
+    width: 90%;
+    max-width: 1200px;
+}
+
+#hero-carousel-section {
+    margin-top: 70px;
+}
+
+.title-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-location {
+    display: flex;
+    align-items: center;
+}
+
+.title-location .title {
+    font-weight: normal;
+}
+
+.title-modal {
+    display: block;
+}
+
+.title-modal p {
+    color: #BFBFBF;
+    font-size: 14px;
+    margin-bottom: 0.3rem;
+}
+
+.title-modal h5 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    border: 1px solid #494949;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 6px;
+    margin-top: 2px;
+}
+
+.location p {
+    font-size: 10px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #222;
+    padding: 20px 0;
+    padding-top: 40px;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.carousel-item {
+    display: flex;
+    gap: 20px;
+    flex: 0 0 100%;
+    justify-content: space-around;
+}
+
+.carousel-item img {
+    width: 480px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    background: #fff;
+    color: #111;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    bottom: 30px;
+}
+
+.prev {
+    left: 40%;
+    background-color: #D1F544;
+}
+
+.next {
+    right: 40%;
+    background-color: #D1F544;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 22px;
+}
+
+.dot {
+    width: 26px;
+    height: 6px;
+    background-color: #555;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+.dot.active {
+    background-color: #aaff00;
+}
+
+#description-product-section {
+    padding-bottom: 100px;
+    margin-top: 40px;
+    height: max-content;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6 .content {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--charcoal-black);
+    padding: 40px 28px;
+    border-radius: 12px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content {
+    width: 96%;
+}
+
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content h5,
+#description-product-section .container-fluid .row .col-lg-6:last-child .content h5 {
+    font-size: 22px;
+    color: white;
+    font-weight: normal;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content p.subtitle {
+    margin-top: 1rem !important;
+    font-size: 16px;
+    /* padding-bottom: 40px !important; */
+    /* border-bottom: 2px solid var(--dark-grey); */
+    color: #BFBFBF;
+    line-height: 1.5;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .row {
+    margin-top: 2rem;
+    padding: 0 0px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 .card {
+    border: 1px solid #BFBFBF;
+    background-color: #333333;
+    width: 94%;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 p.harga {
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 .img-group .title-card {
+    color: #BFBFBF;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:last-child .content .row .col-12 {
+    padding: 10px;
+    background-color: #333333;
+    margin-bottom: 20px !important;
+    color: #BFBFBF;
+    border-radius: 10px;
+    border: 1px solid #5B5B5B;
+}
+
+#description-product-section .container-fluid .row .col-lg-6:last-child .content .row .col-12 p {
+    color: #BFBFBF;
+}
+
+/* end deskripsi */
+
+
+
+/* section modal  */
+
+main #modal-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    height: max-content;
+}
+
+/* main #modal-section .container-fluid .bintang {
+    width: 52px;
+    position: relative;
+    right: 12px;
+} */
+
+main #modal-section .container-fluid h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 0.8rem;
+}
+
+main #modal-section .container-fluid p.lead {
+    color: #CCCCCC;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+main #modal-section .container-fluid .noted-group {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--eerie-black);
+    padding: 24px !important;
+    border-radius: 8px;
+    margin-top: 66px !important;
+}
+
+main #modal-section .container-fluid .noted-group h5 {
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    border-right: 2px solid var(--dark-grey);
+    padding-right: 10px !important;
+}
+
+main #modal-section .container-fluid .noted-group p {
+    padding-left: 10px !important;
+    color: #BFBFBF;
+}
+
+main #modal-section .container-fluid .row {
+    margin-top: 4rem;
+}
+
+main #modal-section .container-fluid .row .harga-jual-groups {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+
+main #modal-section .container-fluid .row .harga-jual-groups .harga-subtitle-groups {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+main #modal-section .container-fluid .row .harga-jual-groups .harga-subtitle-groups p {
+    color: #BFBFBF;
+    margin-left: 6px;
+}
+
+main #modal-section .container-fluid .row .harga-jual-groups h5 {
+    color: white;
+    font-size: 22px;
+    margin-top: 6px !important;
+    font-weight: normal;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain {
+    border: 1px solid var(--dark-grey);
+    background-color: var(--charcoal-black);
+    padding: 40px !important;
+    border-radius: 8px;
+
+}
+
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .row {
+    margin-top: 0px !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .row {
+    border-bottom: 2px solid var(--dark-grey);
+    padding: 30px 0px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12:last-child {
+    padding: 30px 0px !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .row .col-lg-6 p,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .col-lg-6 p {
+    color: #BFBFBF;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .title-aloka-group {
+    border-bottom: 2px solid var(--dark-grey);
+    padding-bottom: 30px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .row {
+    margin-top: 0 !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .row .col-12 {
+    border-bottom: 2px solid var(--dark-grey);
+    padding: 30px 0px !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .row .col-12:last-child {
+    border-bottom: none !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .row .col-12 p {
+    color: #BFBFBF;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group p,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .title-aloka-group p {
+    font-size: 18px !important;
+    font-weight: normal;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group a.btn-primary,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .title-aloka-group a.btn-primary {
+    font-size: 16px !important;
+    background-color: var(--eerie-black) !important;
+    border: 1px solid #CCCCCC !important;
+    font-weight: normal;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .row .col-6 h5,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .col-12 h5,
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .col-12 h5 {
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 8px !important;
+}
+
+main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .col-lg-12 .harga-aloka p.btn-primary {
+    background-color: var(--eerie-black);
+    border: 2px solid var(--dark-grey);
+    border-radius: 20px !important;
+    color: var(--light-gray);
+}
+
+
+@media (max-width: 992px) {
+
+    .carousel-item img {
+        width: 40%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .prev {
+        left: 32%;
+    }
+
+    .next {
+        right: 32%;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group,
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain .title-aloka-group {
+        border-bottom: 2px solid var(--dark-grey);
+        padding-bottom: 30px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-fluid {
+        padding: 0 50px !important;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content {
+        width: 100%;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6 .content {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+
+    main #modal-section .container-fluid h1 {
+        font-size: 28px;
+    }
+
+    main #modal-section .container-fluid p.lead {
+        font-size: 16px;
+    }
+
+    main #modal-section .container-fluid .noted-group {
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+        flex-direction: row !important;
+        margin-top: 2rem !important;
+    }
+
+    main #modal-section .container-fluid .row .harga-jual-groups {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .container-fluid {
+        padding: 0 40px !important;
+    }
+
+    .carousel-item img {
+        width: 75%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+
+    .prev {
+        left: 28%;
+    }
+
+    .next {
+        right: 28%;
+    }
+
+    .img-2 {
+        display: none;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content {
+        width: 100% !important;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6 .content {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content h5,
+    #description-product-section .container-fluid .row .col-lg-6:last-child .content h5 {
+        font-size: 18px;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content p.subtitle,
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 p.harga,
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 .img-group .title-card {
+        font-size: 13px;
+    }
+
+    main #modal-section .container-fluid h1 {
+        font-size: 24px;
+    }
+
+    main #modal-section .container-fluid p.lead {
+        font-size: 14px;
+    }
+
+    main #modal-section .container-fluid .noted-group {
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+        flex-direction: row !important;
+        margin-top: 2rem !important;
+    }
+
+    main #modal-section .container-fluid .noted-group p {
+        text-align: left;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .row {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 28px;
+    }
+
+    main #modal-section .container-fluid .row {
+        margin-top: 3rem;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal,
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain {
+        padding: 20px;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .alokasi-modal .col-12 {
+        padding: 0px 0;
+    }
+
+    .col-lg-6 {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+
+    .title-group {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .location {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        border: 1px solid #494949;
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 6px;
+        margin-top: 8px;
+        width: max-content;
+    }
+
+    .title-location {
+        display: block;
+    }
+
+    .title-modal {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .container-fluid {
+        padding: 0 15px !important;
+    }
+
+    .carousel-item img {
+        width: 85%;
+    }
+
+    .prev {
+        left: 10%;
+    }
+
+    .next {
+        right: 10%;
+    }
+
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+        background-color: #222;
+        padding: 20px 0;
+        padding-top: 40px;
+        border-radius: 10px;
+        width: 89%;
+        margin: 0 auto;
+    }
+
+    .dot {
+        width: 16px;
+        height: 6px;
+        background-color: #555;
+        border-radius: 4px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    main #modal-section .container-fluid .row {
+        margin-top: 1rem !important;
+    }
+
+    #description-product-section {
+        padding-bottom: 70px;
+        overflow: hidden;
+    }
+
+    #description-product-section .container-fluid .row:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .row {
+        display: block;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .row .col-xl-4 {
+        max-width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content {
+        width: 100%;
+    }
+
+
+
+    #description-product-section .container-fluid .row .col-lg-6 .content {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content .row .col-6 .card {
+        width: 100%;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:first-child .content h5,
+    #description-product-section .container-fluid .row .col-lg-6:last-child .content h5 {
+        font-size: 16px;
+    }
+
+    #description-product-section .container-fluid .row .col-lg-6:last-child .content .row .col-12 img {
+        display: none;
+    }
+
+    main #modal-section .container-fluid {
+        padding: 0 40px !important;
+        overflow: hidden;
+    }
+
+    main #modal-section .container-fluid h1 {
+        font-size: 20px;
+    }
+
+    main #modal-section .container-fluid p.lead {
+        font-size: 12px;
+    }
+
+    main #modal-section .container-fluid .noted-group {
+        margin-top: 30px !important;
+        padding: 20px 20px !important;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .col-12 h5 {
+        font-size: 16px;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group {
+        margin-bottom: 0px;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .title-aloka-group a.btn-primary {
+        font-size: 12px !important;
+        background-color: var(--eerie-black) !important;
+        border: 1px solid #CCCCCC !important;
+        font-weight: normal;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    main #modal-section .container-fluid .noted-group img {
+        display: none;
+    }
+
+    main #modal-section .container-fluid .noted-group p {
+        padding-left: 10px !important;
+        color: #BFBFBF;
+        text-align: justify;
+    }
+
+    main #modal-section .container-fluid .row .harga-jual-groups {
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .alokasi-modal .col-12 {
+        padding: 0px 0;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal {
+        padding: 20px !important;
+    }
+
+    .col-lg-6 {
+        max-width: 90% !important;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-modal .alokasi-modal .col-12 .row {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    main #modal-section .container-fluid .row .col-xl-10 .content-aloka-lain-lain {
+        padding: 20px !important;
+    }
+}
+
+
+/* /* costum css */
+.container-fluid {
+    width: 100%;
+    padding: 0 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-xl-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+
+.col-xl-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Spacing */
+.p-0 {
+    padding: 0 !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.ps-2 {
+    padding-left: 8px !important;
+}
+
+.pt-2 {
+    padding-top: 8px !important;
+}
+
+.ms-3 {
+    margin-left: 12px !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mt-lg-0 {
+    margin-top: 0 !important;
+}
+
+/* Flexbox */
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+/* Typography & Colors */
+.text-white {
+    color: #fff !important;
+}

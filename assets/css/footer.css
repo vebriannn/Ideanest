@@ -35,7 +35,8 @@
         text-align: center;
         position: relative;
         overflow: hidden;
-        max-width: 2200px;
+        max-width: 1300px;
+        max-height: 1000rem;
         margin: 100px auto 50px;
     }
     

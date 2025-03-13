@@ -7,39 +7,108 @@
     <title>Home - Detail AI</title>
     <link rel="stylesheet" href="assets/css/detail.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/animate.css">
 </head>
 
 
 <body>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="assets/img/icon.png" alt="ideanest logo" width="20px" height="20px">
-                Ideanest
-            </a>
-            <div class="menu-toggle" id="menu-toggle">
+        <nav class="navbar" id="navbar">
+            <img src="assets/img/logo.png" alt="" class="logo">
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="navbar-nav" id="navbar-nav">
+            <ul class="navbar-nav" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="ai.html" class="nav-link">Ai</a></li>
                 <li><a href="artikel.html" class="nav-link">Artikel</a></li>
                 <li><a href="#" class="nav-link">Kontak</a></li>
                 <li>
                     <div class="signin-signup-mobile">
-                        <a href="#" class="btn btn-signin">Sign In</a>
-                        <a href="#" class="btn btn-signup">Sign Up</a>
+                        <a href="#" class="btn btn-signin" id="mobileSignInBtn">Sign In</a>
+                        <a href="#" class="btn btn-signup" id="mobileSignUpBtn">Sign Up</a>
                     </div>
                 </li>
             </ul>
             <div class="auth-buttons">
-                <a href="#" class="btn btn-signin">Sign In</a>
-                <a href="#" class="btn btn-signup">Sign Up</a>
+                <a href="#" class="btn btn-signin" id="signInBtn">Sign In</a>
+                <a href="#" class="btn btn-signup" id="signUpBtn">Sign Up</a>
             </div>
         </nav>
+
+        <!-- Sign In Modal -->
+        <div class="modal" id="signInModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign In</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Sign In</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signUpModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password"
+                                required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                    Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Create Account</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="switchToSignIn">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -186,8 +255,7 @@
                         <div class="content-aloka-modal ">
                             <div class="title-aloka-group">
                                 <p class="">Alokasi Modal</p>
-                                <a href="https://drive.google.com/file/d/1mr3j8x0mQ3I0uxcXHPeD5tnW-ou2hHwU/view?usp=sharing"
-                                    class="btn btn-primary" id="downloadBtn">Download File</a>
+                                <a href="" class="btn btn-primary" id="downloadBtn">Download File</a>
                             </div>
                             <div class="row alokasi-modal">
                                 <div class="col-12">
@@ -254,6 +322,61 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="assets/img/logo.png" alt="" width="120" height="auto">
+                </div>
+                <p>Subscribe kami untuk kabar terkini tentang fitur dan peluncuran terbaru.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Masukkan email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li><a href="artikel.html">Artikel</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Alamat</h3>
+                    <ul>
+                        <li><a href="#">Jakarta</a></li>
+                        <li><a href="#">Semarang</a></li>
+                        <li><a href="#">Medan</a></li>
+                        <li><a href="#">Bali</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                        <li><a href="#">Kepercayaan dan Keamanan</a></li>
+                        <li><a href="#">Pengelolaan Cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright ©2025 Ideanest. All right reserved</p>
+            <div class="footer-legal">
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="assets/js/navbar.js"></script>

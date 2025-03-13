@@ -4,42 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Ideanest</title>
+    <title>Ideanest - Home</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/animate.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="assets/img/icon.png" alt="ideanest logo" width="20px" height="20px">
-                Ideanest
-            </a>
-            <div class="menu-toggle" id="menu-toggle">
+        <nav class="navbar" id="navbar">
+            <img src="assets/img/logo.png" alt="" class="logo">
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="navbar-nav" id="navbar-nav">
+            <ul class="navbar-nav" id="navLinks">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="ai.html" class="nav-link">Ai</a></li>
                 <li><a href="artikel.html" class="nav-link">Artikel</a></li>
                 <li><a href="#" class="nav-link">Kontak</a></li>
                 <li>
                     <div class="signin-signup-mobile">
-                        <a href="#" class="btn btn-signin">Sign In</a>
-                        <a href="#" class="btn btn-signup">Sign Up</a>
+                        <a href="#" class="btn btn-signin" id="mobileSignInBtn">Sign In</a>
+                        <a href="#" class="btn btn-signup" id="mobileSignUpBtn">Sign Up</a>
                     </div>
                 </li>
             </ul>
             <div class="auth-buttons">
-                <a href="#" class="btn btn-signin">Sign In</a>
-                <a href="#" class="btn btn-signup">Sign Up</a>
+                <a href="#" class="btn btn-signin" id="signInBtn">Sign In</a>
+                <a href="#" class="btn btn-signup" id="signUpBtn">Sign Up</a>
             </div>
         </nav>
+
+        <!-- Sign In Modal -->
+        <div class="modal" id="signInModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign In</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Sign In</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signUpModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password"
+                                required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                    Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Create Account</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="switchToSignIn">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
 
     <main>
         <section class="hero-section-home" id="hero-section-home">
@@ -157,7 +227,8 @@
             <div class="container-fluid">
                 <div class="header">
                     <h2 class="fade-left">Yang Membedakan Ideanest Dengan Platform Lain</h2>
-                    <p class="fade-right">Lewat dukungan AI, kami membantu kamu menggali potensi daerah dan mengubahnya menjadi peluang
+                    <p class="fade-right">Lewat dukungan AI, kami membantu kamu menggali potensi daerah dan mengubahnya
+                        menjadi peluang
                         bisnis yang nyata.</p>
                 </div>
                 <div class="flex-container">
@@ -191,8 +262,9 @@
         <section class="slider-section-home" id="slider-section-home">
             <div class="container-fluid">
                 <div class="header">
-                    <h2 class="fade-left" >Kisah Sukses Para Pengguna Ideanest</h2>
-                    <p class="fade-right">Lihat bagaimana rekomendasi bisnis berbasis AI membantu pengusaha lokal meraih kesuksesan sesuai
+                    <h2 class="fade-left">Kisah Sukses Para Pengguna Ideanest</h2>
+                    <p class="fade-right">Lihat bagaimana rekomendasi bisnis berbasis AI membantu pengusaha lokal meraih
+                        kesuksesan sesuai
                         potensi daerah mereka.</p>
                 </div>
                 <div class="slider-container zoom-in">
@@ -223,30 +295,77 @@
             </div>
         </section>
 
+        <!-- Feature Section -->
+        <section class="feature-section">
+            <div class="feature-content">
+                <div class="logo-footer fade-left">
+                    <img src="assets/img/logo-hitam.png" alt="" width="120" height="auto">
+                </div>
+                <h1 class="fade-right"> Siap Menemukan Peluang Usaha Terbaik di Daerah Kamu?</h1>
+                <p class="zoom-in">Wujudkan usaha impian kamu bersama Ideanest.</p>
+                <button class="cta-button zoom-in-up">Mulai sekarang</button>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <img src="assets/img/logo.png" alt="" width="120" height="auto">
+                </div>
+                <p>Subscribe kami untuk kabar terkini tentang fitur dan peluncuran terbaru.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Masukkan email">
+                    <button class="subscribe-button">Subscribe</button>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ai.html">AI</a></li>
+                        <li><a href="artikel.html">Artikel</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Alamat</h3>
+                    <ul>
+                        <li><a href="#">Jakarta</a></li>
+                        <li><a href="#">Semarang</a></li>
+                        <li><a href="#">Medan</a></li>
+                        <li><a href="#">Bali</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul>
+                        <li><a href="#">Pusat Bantuan</a></li>
+                        <li><a href="#">Kepercayaan dan Keamanan</a></li>
+                        <li><a href="#">Pengelolaan Cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright ©2025 Ideanest. All right reserved</p>
+            <div class="footer-legal">
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/navbar.js"></script>
-    <script>
-        const images = [
-            'url(https://via.placeholder.com/1600x900/FF5733)',
-            'url(https://via.placeholder.com/1600x900/33FF57)',
-            'url(https://via.placeholder.com/1600x900/3357FF)'
-        ];
-
-        let currentIndex = 0;
-        const background = document.getElementById('content');
-
-        function changeBackground() {
-            background.style.backgroundImage = images[currentIndex];
-            background.style.backgroundSize = 'cover';
-            background.style.backgroundPosition = 'center';
-
-            currentIndex = (currentIndex + 1) % images.length;
-        }
-
-        setInterval(changeBackground, 3000);
-        changeBackground(); // initial load
-    </script>
+  
 </body>
 
 </html>

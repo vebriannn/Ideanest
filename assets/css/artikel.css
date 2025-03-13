@@ -28,7 +28,7 @@
     src: url('../fonts/Helvetica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+  }
 
   /* Spacing system */
   --space-1: 4px;
@@ -152,6 +152,7 @@ img {
 
 /* Improve responsive styles with better padding at different breakpoints */
 @media (min-width: 640px) {
+
   .hero-content,
   .articles-section {
     padding: 0 var(--space-6);
@@ -159,6 +160,7 @@ img {
 }
 
 @media (min-width: 1024px) {
+
   .hero-content,
   .articles-section {
     padding: 0 var(--space-8);
@@ -331,6 +333,7 @@ img {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -351,6 +354,7 @@ img {
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -416,7 +420,8 @@ img {
 /* Grid utama */
 .articles-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Memastikan kiri lebih besar */
+  grid-template-columns: 2fr 1fr;
+  /* Memastikan kiri lebih besar */
   gap: var(--space-6);
   align-items: start;
 }
@@ -438,7 +443,8 @@ img {
 
 /* Ukuran gambar utama di featured article */
 .featured-article .article-image {
-  height: 450px; /* Sesuaikan tinggi */
+  height: 450px;
+  /* Sesuaikan tinggi */
   overflow: hidden;
 }
 
@@ -476,7 +482,8 @@ img {
 
 /* Gambar dalam kartu artikel kanan */
 .article-card-right .article-image {
-  flex: 0 0 120px; /* Ukuran gambar lebih besar */
+  flex: 0 0 120px;
+  /* Ukuran gambar lebih besar */
   height: 90px;
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -656,6 +663,7 @@ img {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -844,6 +852,7 @@ img {
 
 /* Small mobile devices */
 @media (max-width: 375px) {
+
   .hero-content,
   .articles-section {
     padding: 0 var(--space-3);
@@ -878,4 +887,3 @@ img {
     scroll-behavior: auto !important;
   }
 }
-

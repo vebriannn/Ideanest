@@ -11,6 +11,7 @@
         font-weight: normal;
         font-style: normal;
     }
+
     body {
         font-family: 'Helvetica', sans-serif !important;
         line-height: 1.6;
@@ -27,8 +28,9 @@
     }
 
     .feature-section {
-        background-image: url("/assets/images/artikel/Frame 88.png");
-        background-size: cover; /* Ubah ke cover agar lebih fleksibel */
+        background-image: url("../img/artikel/bg-featur.png");
+        background-size: cover;
+        /* Ubah ke cover agar lebih fleksibel */
         background-position: center;
         background-repeat: no-repeat;
         padding: 80px 20px;
@@ -38,7 +40,7 @@
         max-width: 2200px;
         margin: 100px auto 50px;
     }
-    
+
     .feature-section::before {
         content: "";
         position: absolute;
@@ -46,14 +48,12 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: repeating-conic-gradient(
-            rgba(255, 255, 255, 0.15) 0% 25%,
-            transparent 0% 50%
-        );
+        background: repeating-conic-gradient(rgba(255, 255, 255, 0.15) 0% 25%,
+                transparent 0% 50%);
         background-size: 100px 100px;
         z-index: 1;
     }
-    
+
     .feature-content {
         max-width: 800px;
         margin: 0 auto;
@@ -61,27 +61,27 @@
         z-index: 2;
         padding: 20px;
     }
-    
+
     .logo-footer {
         font-size: 24px;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         display: inline-block;
     }
-    
+
     .feature-section h1 {
         font-size: 36px;
         font-weight: 700;
         margin-bottom: 15px;
         color: #222;
     }
-    
+
     .feature-section p {
         font-size: 18px;
         margin-bottom: 30px;
         color: #333;
     }
-    
+
     .cta-button {
         background-color: #000;
         color: #fff;
@@ -93,45 +93,81 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
-    
+
     .cta-button:hover {
         background-color: #222;
     }
+
     @media (max-width: 768px) {
         .feature-section {
             padding: 50px 15px;
         }
+
         .feature-section h1 {
             font-size: 28px;
         }
+
         .feature-section p {
             font-size: 16px;
         }
+
         .cta-button {
             padding: 10px 25px;
             font-size: 15px;
         }
     }
-    
+
     @media (max-width: 480px) {
         .feature-section {
             padding: 40px 10px;
         }
+
         .feature-content {
             padding: 10px;
         }
+
         .feature-section h1 {
             font-size: 24px;
         }
+
         .feature-section p {
             font-size: 14px;
         }
+
         .cta-button {
             padding: 8px 20px;
             font-size: 14px;
         }
+
+        .footer-column {
+            flex: 1;
+            min-width: 100px !important;
+        }
+
+        .feature-section {
+            padding: 50px 15px;
+        }
+
+        .feature-section h1 {
+            font-size: 24px;
+        }
+
+        .feature-section p {
+            font-size: 16px;
+        }
+
+        .cta-button {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            flex-direction: row;
+            gap: 20px;
+        }
+
     }
-    
+
 
     /* Footer Section */
     .footer {
@@ -258,43 +294,19 @@
         .feature-section h1 {
             font-size: 28px;
         }
-        
+
         .footer-container {
             flex-direction: column;
             gap: 30px;
         }
-        
+
         .footer-links {
             width: 100%;
         }
-        
+
         .footer-bottom {
             flex-direction: column;
             align-items: center;
             text-align: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .feature-section {
-            padding: 50px 15px;
-        }
-        
-        .feature-section h1 {
-            font-size: 24px;
-        }
-        
-        .feature-section p {
-            font-size: 16px;
-        }
-        
-        .cta-button {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-        
-        .footer-links {
-            flex-direction: column;
-            gap: 20px;
         }
     }

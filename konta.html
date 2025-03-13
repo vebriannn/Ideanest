@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideanest - Kontak</title>
+    <link rel="stylesheet" href="assets/css/konta.css">
+    <link rel="stylesheet" href="assets/css/navbarr.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+   
+    
+    <header>
+        <nav class="navbar" id="navbar">
+           <img src="assets/images/logo.png" alt="" class="logo">
+            <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-nav" id="navLinks">
+                <li><a href="index.html" class="nav-link ">Home</a></li>
+                <li><a href="ai.html" class="nav-link">Ai</a></li>
+                <li><a href="artikel.html" class="nav-link">Artikel</a></li>
+                <li><a href="konta.html" class="nav-link active">Kontak</a></li>
+                <li>
+                    <div class="signin-signup-mobile">
+                        <a href="#" class="btn btn-signin" id="mobileSignInBtn">Sign In</a>
+                        <a href="#" class="btn btn-signup" id="mobileSignUpBtn">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-signin" id="signInBtn">Sign In</a>
+                <a href="#" class="btn btn-signup" id="signUpBtn">Sign Up</a>
+            </div>
+        </nav>
+        
+        <!-- Sign In Modal -->
+        <div class="modal" id="signInModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign In</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signin-email">Email</label>
+                            <input type="email" id="signin-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <input type="password" id="signin-password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Sign In</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sign Up Modal -->
+        <div class="modal" id="signUpModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                    <button class="close-modal" aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label for="signup-name">Full Name</label>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-confirm-password">Confirm Password</label>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Create Account</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="switchToSignIn">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="">
+            <section class="hero">
+                <!-- <img src="assets/images/kontak/hero-contact.png" alt="Hero Image"> -->
+                <div class="contact-button-container">
+                    <button class="contact-button">Contact Us</button>
+                </div>
+                <h1>Customer Service Kami Siap<br>Bantu Kamu 24/7</h1>
+                <p class="subtitle">
+                    Jika terdapat keluhan atau kendala saat menggunakan website kami, kamu bisa langsung menghubungi nomor customer service kami atau mengisi form kendala di bawah.
+                </p>
+            </section>
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <div class="input-container">
+                                    <span class="input-icon"></span>
+                                    <input type="text" id="username" placeholder="Masukan username...">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-container">
+                                    <span class="input-icon"></span>
+                                    <input type="email" id="email" placeholder="Masukan email...">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Nomor Handphone</label>
+                                <div class="input-container">
+                                    <span class="input-icon"></span>
+                                    <input type="tel" id="phone" placeholder="Masukkan nomor telepone...">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <div class="input-container textarea-container">
+                                    <span class="input-icon"></span>
+                                    <textarea id="message" placeholder="Tulis keluhanmu disini..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-button">Kirim</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="info-section">
+                            <h2>Email Support</h2>
+                            <p>Kirim kendalamu melalui email kami</p>
+                            <a href="mailto:Ideanest@gmail.com" class="contact-link">Ideanest@gmail.com</a>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h2>Chat Support</h2>
+                            <p>Chat dengan tim kami untuk bantuan langsung.</p>
+                            <a href="#" class="contact-link">Mulai percakapan</a>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h2>Call Us</h2>
+                            <p>Senin - Jumat, 09.00 - 17.00 WIB (UTC/GMT +10:00)</p>
+                            <a href="tel:0812-3456-7890" class="contact-link">0812-3456-7890</a>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h2>Kantor Jakarta (Pusat)</h2>
+                            <p>Kunjungi kantor kami, Senin - Jumat, 09.00 - 17.00 WIB.</p>
+                            <a href="#" class="contact-link">Jalan Sudirman,<br>Jakarta Pusat 10220, Indonesia</a>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h2>Kantor Purwokerto</h2>
+                            <p>Kunjungi kantor kami, Senin - Jumat, 09.00 - 17.00 WIB.</p>
+                            <a href="#" class="contact-link">40 Jalan Jenderal Soedirman,<br>Purwokerto 53111, Indonesia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <section class="feature-section">
+            <div class="feature-content">
+                <div class="logo-footer">
+                    <img src="assets/images/logo.png" alt="Ideanest Logo" width="100">
+                </div>
+                <h1>Siap Menemukan Peluang Usaha Terbaik di Daerah Kamu?</h1>
+                <p>Wujudkan usaha impian kamu bersama Ideanest.</p>
+                <button class="cta-button">Mulai sekarang</button>
+            </div>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="assets/images/logo.png" alt="Ideanest Logo" height="25">
+                    </div>
+                    <p>Subscribe kami untuk kabar terkini tentang fitur dan peluncuran terbaru.</p>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Masukkan email">
+                        <button class="subscribe-button">Subscribe</button>
+                    </div>
+                </div>
+    
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Navigasi</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="ai.html">AI</a></li>
+                            <li><a href="artikel.html">Artikel</a></li>
+                            <li><a href="konta.html">Kontak</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-column">
+                        <h3>Alamat</h3>
+                        <ul>
+                            <li><a href="#">Jakarta</a></li>
+                            <li><a href="#">Semarang</a></li>
+                            <li><a href="#">Medan</a></li>
+                            <li><a href="#">Bali</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-column">
+                        <h3>Bantuan</h3>
+                        <ul>
+                            <li><a href="#">Pusat Bantuan</a></li>
+                            <li><a href="#">Kepercayaan dan Keamanan</a></li>
+                            <li><a href="#">Pengelolaan Cookie</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                <p>Copyright ©2025 Ideanest. All right reserved</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="/assets/js/navbarr.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Form validation
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            
+            // Simple validation
+            let isValid = true;
+            let errorMessage = '';
+            
+            if (!username.trim()) {
+                isValid = false;
+                errorMessage += 'Username is required.\n';
+            }
+            
+            if (!email.trim()) {
+                isValid = false;
+                errorMessage += 'Email is required.\n';
+            } else if (!isValidEmail(email)) {
+                isValid = false;
+                errorMessage += 'Please enter a valid email address.\n';
+            }
+            
+            if (!phone.trim()) {
+                isValid = false;
+                errorMessage += 'Phone number is required.\n';
+            }
+            
+            if (!message.trim()) {
+                isValid = false;
+                errorMessage += 'Message is required.\n';
+            }
+            
+            if (isValid) {
+                // In a real application, you would send the form data to a server here
+                alert('Form submitted successfully!');
+                contactForm.reset();
+            } else {
+                alert(errorMessage);
+            }
+        });
+    }
+    
+    // Email validation helper function
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    // Mobile menu toggle (for responsive design)
+    // This would be implemented if we had a hamburger menu for mobile
+});
+    </script>
+</body>
+</html>
